@@ -3,5 +3,5 @@
 
 
 def add(a: float, b: float) -> float:
-    """doc"""
+    """float functin annotation"""
     return (a + b)
