@@ -1,23 +1,16 @@
 #!/usr/bin/env python3
-"""doc"""
+""" return the list of all the delays """
 
 
-from basic_async_syntax import wait_random
 import asyncio
 from typing import List
 
 
+wait_random = __import__("0-basic_async_syntax").wait_random
+
+
 async def wait_n(n: int, max_delay: int) -> List[float]:
-    """Returns a list of floats representing random delays.
-    delays = []
-    coroutines = [wait_random(max_delay) for _ in range(n)]
-
-    for future in asyncio.as_completed(coroutines):
-        delay = await future
-        delays.append(delay)
-
-    return delays"""
-
+    """return the list of all the delays"""
     delays = []
     for _ in range(n):
         delays.append(wait_random(max_delay))
