@@ -2,11 +2,11 @@
 """ lists all documents"""
 
 
-from pymongo import MongoClient
+import pymongo
 
 
 def list_all(mongo_collection):
     """ lists all documents"""
     if mongo_collection is None:
         return []
-    return mongo_collection.find()
+    return list(mongo_collection.find())
