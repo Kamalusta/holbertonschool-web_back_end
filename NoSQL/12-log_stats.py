@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""doc"""
+"""script that provides some stats about Nginx logs"""
 
 from pymongo import MongoClient
 
 
 if __name__ == "__main__":
-    """doc"""
+    """script that provides some stats about Nginx logs"""
     client = MongoClient()
     db = client.logs.nginx
     doc_count = db.estimated_document_count()
