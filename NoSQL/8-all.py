@@ -1,12 +1,10 @@
-#!/usr/bin/env pytho3
+#!/usr/bin/env python3
 """ lists all documents"""
-
-
 import pymongo
 
 
-def list_all(collection):
+def list_all(mongo_collection):
     """List doc function"""
-    if not collection:
+    if not mongo_collection:
         return []
-    return list(collection.find())
+    return list(mongo_collection.find())
