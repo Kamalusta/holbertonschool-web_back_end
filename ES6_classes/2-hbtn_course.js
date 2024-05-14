@@ -28,7 +28,7 @@ export default class HolbertonCourse {
       this._name = nname;
     }
     else {
-      throw new TypeError("Name must be a string");
+      throw new TypeError('Name must be a string');
     }
   }
 
@@ -41,7 +41,7 @@ export default class HolbertonCourse {
       this._length = nlength;
     }
     else {
-      throw new TypeError("Length must be a number");
+      throw new TypeError('Length must be a number');
     }
   }
 
