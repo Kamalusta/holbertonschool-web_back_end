@@ -1,12 +1,12 @@
-export default async function getFullResponseFromAPI(success) {
+export default function getFullResponseFromAPI(success) {
   const obj = {
     status: 200,
     body: 'Success'
   };
+
   if (success) {
-    return obj;
+    return Promise.resolve(obj);
   }
-  else {
-    throw 'The fake API is not working currently';
-  }
+
+  return Promise.reject(new Error('The fake API is not working currently'));
 }
